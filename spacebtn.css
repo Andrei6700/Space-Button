@@ -1,0 +1,128 @@
+.moon-container {
+    width: 170px;
+    height: 50px;
+    background: linear-gradient(0, #120c56, #231a1a);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    border-radius: 10px;
+    border-color: transparent;
+    box-shadow: inset 0 0 2px 2px #e78d16, 0 0 10px 5px #d62626;
+    
+  }
+  
+  .moon-container:hover {
+    transform: scale(1.2);
+    border-radius: 40px;
+    box-shadow: 1px 0px 100px #ece1bd60;
+    transition: all 1.4s;
+  }
+  
+  .moon-text {
+    position: relative;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .moon {
+    position: relative;
+    border-color: transparent;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  background-color: #fd7d0d;
+      box-shadow:  5px 0px 30px 2px red;
+    
+  }
+
+  .moon::before {
+   content: "";
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    top: 0;
+    left: -20px;
+    border: 5px solid black;
+    border-width: 0 12px 8px 4px;
+    border-radius: 100%;
+    filter: drop-shadow(0px 0px 6px rgb(72, 114, 230));
+    transform: rotate(-30deg);
+    transition: all 1.2s;
+    animation: LinerBefore 10s ease infinite;
+    
+  }
+  
+  .moon::after {
+   position: absolute;
+    width: 202px;
+    height: 54px;
+    top: 0;
+    left: -17px;
+    border: 5px solid #453c67;
+    border-width: 0 2px 4px 0;
+    border-radius: 100%;
+    filter: drop-shadow(0px 0px 6px rgba(78, 49, 180, 1));
+    transform: rotate(-30deg);
+    animation: LinerAfter 15s ease infinite;
+  }
+  
+  .moon:hover {
+    box-shadow: 0px 0px 100px #F0EAD6;
+    transition: all 1.4s;
+  }
+  
+  .moon:active {
+    transform: scale(1.8);
+    transition: all 2.1s;
+  }
+  
+  @keyframes GradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes LinerAfter {
+    0% {
+      left: -27px;
+      height: 54px;
+    }
+  
+    50% {
+      left: -7px;
+      height: 37px;
+    }
+  
+    100% {
+      left: -27px;
+      height: 54px;
+    }
+  }
+  
+  @keyframes LinerBefore {
+    0% {
+      left: -30px;
+      height: 50px;
+    }
+  
+    50% {
+      left: -10px;
+      height: 33px;
+    }
+  
+    100% {
+      left: -30px;
+      height: 50px;
+    }
+  }
+  
